@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Calibri", Arial, sans-serif !important;
+  font-weight: 400;
+  font-size: 15px;
+  /* line-height: 1.8 !important; */
+  color: black;
+}
+
+.subtext {
+    color: #334155;
+}
+
+.little-extra::after {
+    background-color: #6366f1;
+    opacity: 50%;
+    z-index: -1;
+    content: '';
+    display: block;
+    width: 4rem;
+    height: 1.25rem;
+    position: absolute;
+    margin-top: -1.25rem;
+    margin-left: -.25rem;
+}
+
+/* Projets */
+
+.projet-item .projet-tag {
+    font-size: small;
+    border: #818cf8 solid .5px;
+    color: #4338ca;
+    padding: 1px 3px;
+    border-radius: .25rem;
+}
+
+.projet-item>.projet-liens>a {
+    color: #4338ca;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+a[target="_blank"]::after {
+    content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+    margin: 0 3px 0 5px;
+    color: #4338ca;
+}
