@@ -64,13 +64,13 @@ function populateCompetences(items, id) {
 
         const competenceTitre = document.createElement("h5");
         competenceTitre.className = "text-lg font-semibold";
-        competenceTitre.innerText = items[i].label;
+        competenceTitre.innerText = items[i].label + " :";
         competenceListe.appendChild(competenceTitre);
 
         for (let j = 0; j < items[i].contenu.length; j++) {
             const competenceItem = document.createElement("span");
-            competenceItem.className = "bg-indigo-200 text-sm border-0.5 border-indigo-400 rouned-md px-2 py-1 text-indigo-700";
-            competenceItem.innerText = items[i];
+            competenceItem.className = "bg-indigo-200 text-sm rounded-md p-1 text-indigo-700";
+            competenceItem.innerText = items[i].contenu[j];
             competenceListe.appendChild(competenceItem);
         }
 
