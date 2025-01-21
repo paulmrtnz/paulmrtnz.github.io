@@ -60,7 +60,7 @@ function populateCompetences(items, id) {
 
     for (let i = 0; i < items.length ; i++) {
         const competenceListe = document.createElement("div");
-        competenceListe.className = "flex flex-wrap space-x-2";
+        competenceListe.className = "flex flex-wrap gap-2";
 
         const competenceTitre = document.createElement("h5");
         competenceTitre.className = "text-lg font-semibold";

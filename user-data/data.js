@@ -11,7 +11,7 @@ export const projets = [
     titre: "Serre connectée",
     date: "juin 2022",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec pur",
+      "Projet de conception d'une serre connectée, avec un système de contrôle d'humidité, de température et de luminosité.",
     tags: [
       "1<sup>ère</sup> année INSA",
       "En équipe",
@@ -42,7 +42,7 @@ export const projets = [
     date: "juin 2024",
     description:
       "Introduction à la recherche expérimentale. Écriture d'un script python pour classifier des données en utilisant un classificateur naïf Bayésien.",
-    tags: ["Groupe", "Python"],
+    tags: ["3<sup>ème</sup> année INSA", "Groupe", "Python"],
     liens: [],
   },
   {
