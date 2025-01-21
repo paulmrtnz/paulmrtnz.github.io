@@ -69,7 +69,7 @@ function populateCompetences(items, id) {
 
         for (let j = 0; j < items[i].contenu.length; j++) {
             const competenceItem = document.createElement("span");
-            competenceItem.className = "bg-indigo-200 text-sm rounded-md p-1 text-indigo-700";
+            competenceItem.className = "bg-indigo-200 text-sm rounded-md py-1 px-2 text-indigo-700";
             competenceItem.innerText = items[i].contenu[j];
             competenceListe.appendChild(competenceItem);
         }
