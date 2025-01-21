@@ -12,17 +12,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script type="module" src="index.js"></script>
   </head>
-  <body>
-    <header class="border-b-2 border-gray-200 p-4 sm:p-6 md:p-8">
-      <h1 class="text-3xl font-bold mb-3">Paul Martinez</h1>
-      <p class="subtext">
-        Étudiant à Institut National des Sciences Appliquées Centre Val de Loire
-        | Génie des Systèmes Industriels | Option Acquisition Analyse et
-        Décision
-        <br />
-        2<sup>ème</sup> année de cycle ingénieur
-      </p>
-    </header>
+  <body class="md:px-16 lg:px-32 xl:px-72 2xl:px-96">
+      <header class="border-b-2 border-gray-200 p-4 sm:p-6 md:p-8 ">
+        <h1 class="text-3xl font-bold mb-3">Paul Martinez</h1>
+        <p class="subtext">
+          Étudiant à Institut National des Sciences Appliquées Centre Val de Loire
+          | Génie des Systèmes Industriels | Option Acquisition Analyse et
+          Décision
+          <br />
+          2<sup>ème</sup> année de cycle ingénieur
+        </p>
+      </header>
     <main>
       <section id="formation" class="timeline p-4 md:p-8">
         <h2 class="timeline-title text-2xl font-semibold mb-5 text-slate-800 little-extra">FORMATION</h2>
@@ -86,25 +86,18 @@
           </div>
         </div>
       </section>
+      <section id="competences" class="p-4 md:p-8">
+        <h2 class="text-2xl font-semibold mb-3 text-slate-800 little-extra">COMPETENCES</h2>
+        <div id="conteneur-competences" class="flex flex-wrap space-x-2 space-y-2">
+
+        </div>
+      </section>
       <section id="projets" class="p-4 md:p-8">
         <h2 class="text-2xl font-semibold mb-3 text-slate-800 little-extra">PROJETS</h2>
         <div id="conteneur-projets" class="grid grid-cols-1 md:grid-cols-3 gap-2 projet-container">
-          <!-- <div class="border border-slate-300 rounded-md px-2 py-1 md:px-4 md:py-2 flex flex-col space-y-1 shadow projet-item">
-            <h5 class="text-lg font-semibold">Serre autonome</h5>
-            <p class="subtext projet-date">juin 2022</p>
-            <p class="projet-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut distinctio quo quidem praesentium nesciunt porro libero modi</p>
-            <div class="flex space-x-2 projet-tags ">
-              <span class="projet-tag bg-indigo-200">1<sup>ère</sup> année INSA</span>
-              <span class="projet-tag bg-indigo-200">En équipe</span>
-              <span class="projet-tag bg-indigo-200">R&D</span>
-              <span class="projet-tag bg-indigo-200">Programmation</span>
-            </div>
-            <div class="flex space-x-2 projet-links">
-              <a href="#" target="_blank" >Github</a>
-            </div>
-          </div> -->
         </div> 
       </section>
+      
     </main>
   </body>
 </html>

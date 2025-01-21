@@ -1,5 +1,6 @@
 import {
-    projets
+    projets,
+    competences
 } from './user-data/data.js';
 
 function populateProjets(items, id) {
@@ -54,4 +55,29 @@ function populateProjets(items, id) {
     }
 }
 
+function populateCompetences(items, id) {
+    const target = document.getElementById(id);
+
+    for (let i = 0; i < items.length ; i++) {
+        const competenceListe = document.createElement("div");
+        competenceListe.className = "flex flex-wrap space-x-2";
+
+        const competenceTitre = document.createElement("h5");
+        competenceTitre.className = "text-lg font-semibold";
+        competenceTitre.innerText = items[i].label;
+        competenceListe.appendChild(competenceTitre);
+
+        for (let j = 0; j < items[i].contenu.length; j++) {
+            const competenceItem = document.createElement("span");
+            competenceItem.className = "bg-indigo-200 text-sm border-0.5 border-indigo-400 rouned-md px-2 py-1 text-indigo-700";
+            competenceItem.innerText = items[i];
+            competenceListe.appendChild(competenceItem);
+        }
+
+        target.appendChild(competenceListe);
+    }
+    
+}
+
 populateProjets(projets, "conteneur-projets");
+populateCompetences(competences, "conteneur-competences");
