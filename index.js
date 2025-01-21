@@ -79,5 +79,5 @@ function populateCompetences(items, id) {
     
 }
 
-populateProjets(projets, "conteneur-projets");
+populateProjets(projets.reverse(), "conteneur-projets");
 populateCompetences(competences, "conteneur-competences");

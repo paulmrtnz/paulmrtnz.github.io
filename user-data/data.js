@@ -5,7 +5,7 @@ export const projets = [
     description:
       "Projet de site internet pour visualiser la presse française sur un échiquier politique. Le projet n'a jamais abouti.",
     tags: ["En équipe", "Web", "BDD", "API"],
-    liens: [{ type: "github", url: "#", label: "Github" }],
+    liens: [],
   },
   {
     titre: "Serre connectée",
@@ -19,7 +19,7 @@ export const projets = [
       "Programmation",
       "IoT",
     ],
-    liens: [{ type: "github", url: "#", label: "Github" }],
+    liens: [],
   },
   {
     titre: "Projet C - Bataille navale",
@@ -27,7 +27,7 @@ export const projets = [
     description:
       "Application python pour générer son menu de la semaine, à partir de plats enregistrés localement.",
     tags: ["2<sup>ème</sup> année INSA", "Groupe", "C", "SDL"],
-    liens: [{ type: "github", url: "#", label: "Github" }],
+    liens: [],
   },
   {
     titre: "Redesign - Site Cafet étudiante de l'INSA",
@@ -35,7 +35,15 @@ export const projets = [
     description:
       "Réécriture du design du site de la cafétéria étudiante de l'INSA CVL.",
     tags: ["Groupe", "CSS", "PHP"],
-    liens: [{ type: "github", url: "#", label: "Github" }],
+    liens: [],
+  },
+  {
+    titre: "Classificateur naïf Bayésien en python",
+    date: "juin 2024",
+    description:
+      "Introduction à la recherche expérimentale. Écriture d'un script python pour classifier des données en utilisant un classificateur naïf Bayésien.",
+    tags: ["Groupe", "Python"],
+    liens: [],
   },
   {
     titre: "Le Menutator",
@@ -43,7 +51,7 @@ export const projets = [
     description:
       "Application python pour générer son menu de la semaine, à partir de plats enregistrés localement.",
     tags: ["Python"],
-    liens: [{ type: "github", url: "#", label: "Github" }],
+    liens: [{ type: "github", url: "https://github.com/paulmrtnz/menutator", label: "Github" }],
   },
 ];
 
