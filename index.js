@@ -7,7 +7,7 @@ function populateProjets(items, id) {
 
     for (let i = 0; i < items.length ; i++) {
         const projetItem = document.createElement("div");
-        projetItem.className = "blog-card border border-slate-300 rounded-md px-2 py-1 md:px-4 md:py-2 flex flex-col space-y-1 shadow";
+        projetItem.className = "border border-slate-300 rounded-md px-2 py-1 md:px-4 md:py-2 flex flex-col space-y-1 shadow projet-item";
     
         // Créer le titre
         const projetTitre = document.createElement("h5");
@@ -45,6 +45,7 @@ function populateProjets(items, id) {
             const projetLien = document.createElement("a");
             projetLien.href = items[i].liens[k].url;
             projetLien.target = "_blank";
+            projetLien.innerText = items[i].liens[k].label;
             projetLiensConteneur.appendChild(projetLien);
         }
         projetItem.appendChild(projetLiensConteneur);
