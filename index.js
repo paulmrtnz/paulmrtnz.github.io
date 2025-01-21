@@ -30,7 +30,7 @@ function populateProjets(items, id) {
 
         // Créer les tags
         const projetTagsConteneur = document.createElement("div");
-        projetTagsConteneur.className = "flex flex-wrap space-x-2 projet-tags";
+        projetTagsConteneur.className = "flex flex-wrap gap-2 projet-tags";
         for (let j = 0; j < items[i].tags.length; j++) {
             const projetTag = document.createElement("span");
             projetTag.className = "projet-tag bg-indigo-200";
