@@ -25,7 +25,7 @@ export const projets = [
     titre: "Projet C - Bataille navale",
     date: "janvier 2025",
     description:
-      "Application python pour générer son menu de la semaine, à partir de plats enregistrés localement.",
+      "",
     tags: ["2<sup>ème</sup> année INSA", "Groupe", "C", "SDL"],
     liens: [],
   },
@@ -51,7 +51,7 @@ export const projets = [
     description:
       "Application python pour générer son menu de la semaine, à partir de plats enregistrés localement.",
     tags: ["Python"],
-    liens: [{ type: "github", url: "https://github.com/paulmrtnz/menutator", label: "Github" }],
+    liens: [],
   },
 ];
 
