@@ -12,20 +12,13 @@ export const projets = [
     date: "juin 2022",
     description:
       "Projet de conception d'une serre connectée, avec un système de contrôle d'humidité, de température et de luminosité.",
-    tags: [
-      "1<sup>ère</sup> année INSA",
-      "En équipe",
-      "IoT",
-      "Arduino",
-      "LoRA",
-    ],
+    tags: ["1<sup>ère</sup> année INSA", "En équipe", "IoT", "Arduino", "LoRA"],
     liens: [],
   },
   {
     titre: "Projet C - Bataille navale",
     date: "janvier 2025",
-    description:
-      "",
+    description: "",
     tags: ["2<sup>ème</sup> année INSA", "Groupe", "C", "SDL"],
     liens: [],
   },
@@ -57,12 +50,29 @@ export const projets = [
 
 export const competences = [
   {
+    label: "Soft skills",
+    contenu: [
+      "Créativité",
+      "Adaptabilité / Résilience",
+      "Rigueur / Souci du détail",
+      "Organisation / Fiabilité",
+      "Curiosité",
+      "Prise d'initiative",
+    ],
+  },
+  {
+    label: "Hard skills",
+    contenu: [
+      "Coordination d'équipe et gestion de planning",
+      "Gestion et régie événementielle",
+    ],
+  },
+  {
     label: "Programmation",
     contenu: [
       "C / C++",
-      "HTML / CSS / JavaScript",
+      "HTML / CSS / JavaScript / TypeScript",
       "React / NextJS",
-      "Typescript",
       "Python",
       "SQL",
       "PHP",
@@ -70,7 +80,7 @@ export const competences = [
   },
   {
     label: "Analyse de données",
-    contenu: ["R", "Python (Numpy / Pandas)"],
+    contenu: ["MATLAB", "R", "Python (Numpy / Pandas)"],
   },
   {
     label: "Langues",

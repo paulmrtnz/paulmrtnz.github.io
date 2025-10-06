@@ -13,20 +13,89 @@
     <script type="module" src="index.js"></script>
   </head>
   <body class="md:px-16 lg:px-32 xl:px-72 2xl:px-96">
-      <header class="border-b-2 border-gray-200 p-4 sm:p-6 md:p-8 ">
-        <h1 class="text-4xl md:text-5xl font-bold mb-3 text-slate-900">Paul Martinez</h1>
-        <p class="subtext text-sm md:text-base text-slate-700">
-          Étudiant à Institut National des Sciences Appliquées Centre Val de Loire
-          | Génie des Systèmes Industriels | Option Acquisition Analyse et
-          Décision
-          <br />
-          3<sup>ème</sup> année de cycle ingénieur
-          <br />
-          22 ans
-        </p>
-        
-      </header>
+    <header class="border-b-2 border-gray-200 p-4 sm:p-6 md:p-8 ">
+      <h1 class="text-4xl md:text-5xl font-bold mb-3 text-slate-900">Paul Martinez</h1>
+      <p class="subtext text-sm md:text-base text-slate-700">
+        Étudiant à Institut National des Sciences Appliquées Centre Val de Loire
+        | Génie des Systèmes Industriels | Option Acquisition Analyse et
+        Décision
+        <br />
+        3<sup>ème</sup> année de cycle ingénieur
+        <br />
+        22 ans
+      </p>
+      <div class="flex content-between mt-4 md:mt-8">
+        <div class="flex space-x-4"></div>
+          <a href="https://linkedin.com/in/paul-martinez-paul" target="_blank" rel="noopener noreferrer" 
+             class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg flex items-center space-x-2 transition-colors duration-200">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"></path>
+            </svg>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </header>
     <main>
+      <section id="experience" class="timeline p-4 md:p-8">
+        <h2 class="timeline-title text-2xl font-semibold mb-5 text-slate-800 little-extra">EXPERIENCE PROFESSIONNELLE</h2>
+        <div class="timeline-content flex items-center">
+          <div class="space-y-6 border-l-2 border-dashed border-indigo-200">
+            <div class="w-full">
+              <span
+                class="-ml-0.5 text-indigo-700 font-bold bg-indigo-100 px-2 py-1"
+                >avril - juillet 2025 (4 mois)</span
+              >
+              <div class="ml-6 mt-2">
+                <h4 class="font-bold text-indigo-700 text-lg">
+                  Laboratoire LaMé, Laboratoire LIFAT, <small class="text-indigo-600">Blois (41)</small>
+                </h4>
+                <h5 class="text-indigo-500">
+                  Stagiaire Recherche
+                </h5>
+                <h5 class="text-indigo-500">
+                  <cite><b>Evaluation des dommages dans une poutre par étude vibratoire à l’aide de réseaux de neurones</b></cite>
+                </h5>
+                <p class="mt-2 max-w-screen-sm text-sm md:text-base text-slate-600">
+                  <ul class="text-slate-600">
+                    <li>Développement et entraînement de réseaux de neurones perceptron multicouche (MLP) pour la détection de dommages.</li>
+                    <li>Optimisation de l’apprentissage par mise en œuvre de la fonction softmax et ajustement de la répartition d’entraînement.</li>
+                    <li>Réalisation de tests expérimentaux sur le modèle afin de valider les résultats numériques.</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+            <div class="w-full">
+              <span
+                class="-ml-0.5 text-indigo-700 font-bold bg-indigo-100 px-2 py-1"
+                >juillet 2024 (1 mois) et juillet 2023 (1 mois)</span
+              >
+              <div class="ml-6 mt-2">
+                <h4 class="font-bold text-indigo-700 text-lg">
+                  SGAMI, <small class="text-indigo-600">Lyon (69)</small>
+                </h4>
+                <h5 class="text-indigo-500">
+                  Contractuel
+                </h5>
+              </div>
+            </div>
+            <div class="w-full">
+              <span
+                class="-ml-0.5 text-indigo-700 font-bold bg-indigo-100 px-2 py-1"
+                >juillet 2022 (1 mois)</span
+              >
+              <div class="ml-6 mt-2">
+                <h4 class="font-bold text-indigo-700 text-lg">
+                  FIMA SAS (Franchise McDonald's), <small class="text-indigo-600">Lyon (69)</small>
+                </h4>
+                <h5 class="text-indigo-500">
+                  Équipier polyvalent
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section id="formation" class="timeline p-4 md:p-8">
         <h2 class="timeline-title text-2xl font-semibold mb-5 text-slate-800 little-extra">FORMATION</h2>
         <div class="timeline-content flex items-center">
@@ -101,7 +170,15 @@
           <!-- contenu généré par index.js -->
         </div> 
       </section>
-      
+      <footer class="p-4 md:p-8 text-slate-600 flex flex-row justify-center items-center space-x-4">
+        <img src="qrcode.png" alt="QR Code vers cette page" class="h-48 w-48"/>
+        <div>
+          <p>Paul Martinez - 2024</p>
+          <p>Site web réalisé avec HTML, CSS (TailwindCSS) et JavaScript</p>
+          <p>Hébergement via GitHub Pages</p>
+          <p>Dernière mise à jour : octobre 2025</p>
+        </div>
+      </footer>
     </main>
   </body>
 </html>
