@@ -24,7 +24,10 @@ export const projets = [
       "Programmation en C d'un jeu de bataille navale avec interface graphique SDL.",
     tags: ["2<sup>ème</sup> année INSA", "Groupe", "C", "SDL"],
     liens: [
-      // { url: "https://github.com/paulmrtnz/bataille-navale", label: "GitHub" },
+      {
+        url: "https://github.com/paulmrtnz/bataille-navale-en-C",
+        label: "GitHub",
+      },
     ],
   },
   {
@@ -33,7 +36,7 @@ export const projets = [
     description:
       "Réécriture du design du site de la cafétéria étudiante de l'INSA CVL.",
     tags: ["Groupe", "CSS", "PHP"],
-    liens: [],
+    liens: [{ url: "https://cafet.insa-cvl.org/", label: "Site web" }],
   },
   {
     titre: "Classificateur naïf Bayésien en python",
@@ -42,7 +45,7 @@ export const projets = [
       "Introduction à la recherche expérimentale. Écriture d'un script python pour classifier des données en utilisant un classificateur naïf Bayésien.",
     tags: ["3<sup>ème</sup> année INSA", "Groupe", "Python"],
     liens: [
-      //{"url": "https://github.com/paulmrtnz/naive-bayes-classifier-python", "label": "GitHub"}
+      {"url": "https://github.com/paulmrtnz/naive-bayes-classifier-python", "label": "GitHub"}
     ],
   },
   {
@@ -108,12 +111,20 @@ export const projets = [
   {
     titre: "Projet de fin d'études: Détection de migraines avec IA",
     date: "2024-2025",
-    description: "Etude des données de santé Apple HealthKit et développement d'un modèle d'IA pour la détection précoce de migraines chez un patient.",
-    tags: ["5<sup>ème</sup> année INSA", "IA", "Data Science", "Python", "Pytorch", "Apple HealthKit"],
+    description:
+      "Etude des données de santé Apple HealthKit et développement d'un modèle d'IA pour la détection précoce de migraines chez un patient.",
+    tags: [
+      "5<sup>ème</sup> année INSA",
+      "IA",
+      "Data Science",
+      "Python",
+      "Pytorch",
+      "Apple HealthKit",
+    ],
     liens: [
       // {"url": "https://github.com/paulmrtnz/migraine_prediction_nn", "label": "GitHub"}
     ],
-  }
+  },
 ];
 
 export const competences = [
