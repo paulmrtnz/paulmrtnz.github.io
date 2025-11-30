@@ -24,7 +24,7 @@ function populateProjets(items, id) {
 
         // Créer la description
         const projetDescription = document.createElement("p");
-        projetDescription.className = "";
+        projetDescription.className = "text-justify";
         projetDescription.innerText = items[i].description;
         projetItem.appendChild(projetDescription);
 
@@ -33,7 +33,7 @@ function populateProjets(items, id) {
         projetTagsConteneur.className = "flex flex-wrap gap-2 projet-tags";
         for (let j = 0; j < items[i].tags.length; j++) {
             const projetTag = document.createElement("span");
-            projetTag.className = "projet-tag bg-indigo-200";
+            projetTag.className = "projet-tag bg-orange-100 text-orange-400";
             projetTag.innerHTML = items[i].tags[j];
             projetTagsConteneur.appendChild(projetTag);
         }
@@ -69,7 +69,7 @@ function populateCompetences(items, id) {
 
         for (let j = 0; j < items[i].contenu.length; j++) {
             const competenceItem = document.createElement("span");
-            competenceItem.className = "bg-indigo-200 text-sm rounded-md py-1 px-2 text-indigo-700";
+            competenceItem.className = "bg-orange-200 text-sm rounded-md py-1 px-2 text-orange-600";
             competenceItem.innerText = items[i].contenu[j];
             competenceListe.appendChild(competenceItem);
         }

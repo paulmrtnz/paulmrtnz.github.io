@@ -9,16 +9,14 @@ body {
   /* line-height: 1.8 !important; */
   color: rgb(20, 20, 20);
 
-  --main-color: #6366f1;
-  --main-color-darker: #4338ca;
-  --main-color-lighter: #818cf8;
+  --main-color: oklch(83.7% 0.128 66.29);
+  --main-color-darker: oklch(76.9% 0.188 70.08);
+  --main-color-lighter: oklch(95.4% 0.038 75.164);
 }
 
 .subtext {
   color: #334155;
 }
-
-
 
 .little-extra::after {
   background-color: var(--main-color);
