@@ -45,7 +45,10 @@ export const projets = [
       "Introduction à la recherche expérimentale. Écriture d'un script python pour classifier des données en utilisant un classificateur naïf Bayésien.",
     tags: ["3<sup>ème</sup> année INSA", "Groupe", "Python"],
     liens: [
-      {"url": "https://github.com/paulmrtnz/naive-bayes-classifier-python", "label": "GitHub"}
+      {
+        url: "https://github.com/paulmrtnz/naive-bayes-classifier-python",
+        label: "GitHub",
+      },
     ],
   },
   {
@@ -56,6 +59,16 @@ export const projets = [
     tags: ["Python"],
     liens: [
       // {"url": "https://github.com/paulmrtnz/menutator", "label": "GitHub"}
+    ],
+  },
+  {
+    titre: "Snake en C++",
+    date: "mars 2025",
+    description:
+      "Jeu Snake développé en C++ avec une interface graphique sous Qt.",
+    tags: ["C++", "Jeu", "Git", "Qt Lite"],
+    liens: [
+      { url: "https://github.com/paulmrtnz/snake-en-cpp", label: "GitHub" },
     ],
   },
   {
@@ -76,7 +89,7 @@ export const projets = [
     ],
   },
   {
-    titre: "AGV suiveur de ligne IoT",
+    titre: "Projet IoT - AGV industriel",
     date: "octobre 2025",
     description:
       "Conception et réalisation d'un véhicule autoguidé (AGV) suiveur de ligne avec communication IoT en Bluetooth pour le suivi et le contrôle à distance via une application web.",
