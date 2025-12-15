@@ -68,7 +68,7 @@ export const projets = [
       "Jeu Snake développé en C++ avec une interface graphique sous Qt.",
     tags: ["C++", "Jeu", "Git", "Qt Lite"],
     liens: [
-      { url: "https://github.com/paulmrtnz/snake-en-cpp", label: "GitHub" },
+      { url: "https://github.com/paulmrtnz/snake-game-cpp", label: "GitHub" },
     ],
   },
   {
@@ -85,7 +85,7 @@ export const projets = [
       "Liaison série",
     ],
     liens: [
-      //{"url": "https://github.com/paulmrtnz/INS_VIR_5A", "label": "GitHub"}
+      //{"url": "https://github.com/paulmrtnz/INSA-M2-virtual-instrumentation/", "label": "GitHub"}
     ],
   },
   {
@@ -103,7 +103,7 @@ export const projets = [
       "Python Web (FastAPI)",
     ],
     liens: [
-      //{"url": "https://github.com/paulmrtnz/5A_ACAD_IoT", "label": "GitHub"}
+      {"url": "https://github.com/paulmrtnz/INSA-M2-Smart-AGV-IoT", "label": "GitHub"}
     ],
   },
   {
@@ -118,7 +118,7 @@ export const projets = [
       "Firebase (Auth + Firestore)",
     ],
     liens: [
-      // {"url": "https://github.com/paulmrtnz/kill3r", "label": "GitHub"}
+      {"url": "https://github.com/paulmrtnz/kill3r", "label": "GitHub"}
     ],
   },
   {
