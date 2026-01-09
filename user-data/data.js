@@ -1,12 +1,12 @@
 export const projets = [
-  {
-    titre: "Info Politique Presse",
-    date: "2020-2021",
-    description:
-      "Projet de site internet pour visualiser la presse française sur un échiquier politique. Le projet n'a jamais abouti.",
-    tags: ["En équipe", "Web", "BDD", "API"],
-    liens: [],
-  },
+  // {
+  //   titre: "Info Politique Presse",
+  //   date: "2020-2021",
+  //   description:
+  //     "Projet de site internet pour visualiser la presse française sur un échiquier politique. Le projet n'a jamais abouti.",
+  //   tags: ["En équipe", "Web", "BDD", "API"],
+  //   liens: [],
+  // },
   {
     titre: "Serre connectée IoT",
     date: "juin 2022",
