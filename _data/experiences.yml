@@ -1,0 +1,23 @@
+- period: "avril - juillet 2025 (4 mois)"
+  organization: "Laboratoire LaMé, Laboratoire LIFAT"
+  location: "Blois (41)"
+  role: "Stagiaire Recherche"
+  mission: "Evaluation des dommages dans une poutre par étude vibratoire à l’aide de réseaux de neurones"
+  details:
+    - "Développement et architecture de réseaux de neurones de type Perceptron Multicouche (MLP) dédiés à l'identification de dommages structurels sous PyTorch"
+    - "Optimisation des performances du modèle via une stratégie d'ingénierie des données (data splitting et équilibrage des datasets et de la répartition des données)"
+    - "Validation expérimentale : confrontation des prédictions du modèle avec des essais vibratoires pour confirmer la fiabilité des simulations numériques (RDM6, MATLAB)"
+
+- period: "juillet 2024 (1 mois) et juillet 2023 (1 mois)"
+  organization: "SGAMI"
+  location: "Lyon (69)"
+  role: "Contractuel"
+  mission:
+  details: []
+
+- period: "juillet 2022 (1 mois)"
+  organization: "FIMA SAS (Franchise McDonald's)"
+  location: "Lyon (69)"
+  role: "Équipier polyvalent"
+  mission:
+  details: []

@@ -1,0 +1,34 @@
+- label: "Soft skills"
+  contenu:
+    - "Créativité"
+    - "Adaptabilité / Résilience"
+    - "Rigueur / Souci du détail"
+    - "Organisation / Fiabilité"
+    - "Curiosité"
+    - "Prise d'initiative"
+
+- label: "Hard skills"
+  contenu:
+    - "Coordination d'équipe et gestion de planning"
+    - "Gestion et régie événementielle"
+
+- label: "Programmation"
+  contenu:
+    - "C / C++"
+    - "Python"
+    - "JavaScript / TypeScript / React / NextJS"
+    - "PHP"
+    - "SQL"
+    - "HTML / CSS"
+
+- label: "Analyse de données + IA"
+  contenu:
+    - "MATLAB"
+    - "R"
+    - "Python (Numpy / Pandas / Pytorch / Scikit-learn)"
+
+- label: "Langues"
+  contenu:
+    - "Français (Maternel)"
+    - "Anglais (C1)"
+    - "Allemand (B2)"

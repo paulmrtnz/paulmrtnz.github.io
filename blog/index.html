@@ -1,0 +1,30 @@
+---
+title: "Blog"
+layout: default
+---
+<section class="p-4 md:p-8 space-y-6">
+  <div class="flex items-center justify-between">
+    <h1 class="text-3xl md:text-4xl font-bold text-slate-900 little-extra">Blog</h1>
+    <a href="{{ '/' | relative_url }}" class="text-orange-500 underline hover:text-orange-600">← Retour au portfolio</a>
+  </div>
+  <div class="grid grid-cols-1 gap-4">
+    {% for post in site.posts %}
+      <article class="border border-slate-200 rounded-lg p-4 shadow-sm space-y-2">
+        <p class="text-sm text-orange-400 font-semibold">{{ post.date | date: "%-d %B %Y" }}</p>
+        <h2 class="text-2xl font-semibold text-slate-900">
+          <a href="{{ post.url | relative_url }}" class="hover:text-orange-500">{{ post.title }}</a>
+        </h2>
+        {% if post.description %}
+          <p class="text-slate-700">{{ post.description }}</p>
+        {% endif %}
+        {% if post.tags %}
+          <div class="flex flex-wrap gap-2">
+            {% for tag in post.tags %}
+              <span class="bg-orange-100 text-orange-500 px-2 py-1 rounded text-sm">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </article>
+    {% endfor %}
+  </div>
+</section>
