@@ -1,207 +1,183 @@
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Portfolio | Paul Martinez</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Page web portfolio de Paul Martinez" />
-    <meta name="author" content="Paul Martinez" />
-    <link rel="stylesheet" href="/css/styles.css" />
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script type="module" src="index.js"></script>
-  </head>
-  <body class="md:px-16 lg:px-32 xl:px-72 2xl:px-96">
-    <header class="border-b-2 border-gray-200 p-4 sm:p-6 md:p-8 ">
-      <h1 class="text-4xl md:text-5xl font-bold mb-3 text-slate-900">Paul Martinez</h1>
-      <p class="subtext text-sm md:text-base text-slate-700">
-        Étudiant à Institut National des Sciences Appliquées Centre Val de Loire
-        | Génie des Systèmes Industriels | Option Acquisition Analyse et
-        Décision
-        <br />
-        3<sup>ème</sup> année de cycle ingénieur
-        <br />
-        22 ans
-      </p>
-      <div class="flex content-between mt-4">
-        <div class="flex gap-2">
-          <a href="https://linkedin.com/in/paul-martinez-paul" target="_blank" rel="noopener noreferrer" 
-             class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg flex items-center space-x-2 transition-colors duration-200">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"></path>
-            </svg>
-            <span>LinkedIn</span>
-          </a>
-          <a href="https://github.com/paulmrtnz" target="_blank" rel="noopener noreferrer" 
-             class="bg-zinc-600 hover:bg-zinc-700 text-white font-medium py-2 px-4 rounded-lg flex items-center space-x-2 transition-colors duration-200">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"></path>
-            </svg>
-            <span>GitHub</span>
-          </a>
-        </div>
+---
+layout: default
+title: "Portfolio"
+description: "Page web portfolio de Paul Martinez"
+---
+<div class="p-4 sm:p-6 md:p-8">
+  <div class="flex justify-end space-x-4 text-sm text-slate-600">
+    <a href="#experience" class="hover:text-orange-500">Expérience</a>
+    <a href="#formation" class="hover:text-orange-500">Formation</a>
+    <a href="#competences" class="hover:text-orange-500">Compétences</a>
+    <a href="#projets" class="hover:text-orange-500">Projets</a>
+    <a href="{{ '/blog/' | relative_url }}" class="text-orange-500 font-medium">Blog</a>
+  </div>
+  <header class="border-b-2 border-gray-200 pt-2 pb-6 md:pt-4 md:pb-8">
+    <h1 class="text-4xl md:text-5xl font-bold mb-3 text-slate-900">Paul Martinez</h1>
+    <p class="subtext text-sm md:text-base text-slate-700">
+      Étudiant à Institut National des Sciences Appliquées Centre Val de Loire
+      | Génie des Systèmes Industriels | Option Acquisition Analyse et
+      Décision
+      <br />
+      3<sup>ème</sup> année de cycle ingénieur
+      <br />
+      22 ans
+    </p>
+    <div class="flex content-between mt-4">
+      <div class="flex gap-2">
+        <a href="https://linkedin.com/in/paul-martinez-paul" target="_blank" rel="noopener noreferrer" 
+           class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg flex items-center space-x-2 transition-colors duration-200">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"></path>
+          </svg>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/paulmrtnz" target="_blank" rel="noopener noreferrer" 
+           class="bg-zinc-600 hover:bg-zinc-700 text-white font-medium py-2 px-4 rounded-lg flex items-center space-x-2 transition-colors duration-200">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"></path>
+          </svg>
+          <span>GitHub</span>
+        </a>
       </div>
-      <p class="md:text-base text-slate-700 mt-4 text-justify">
-        Futur ingénieur INSA en Génie des Systèmes Industriels, spécialisé en Acquisition et Analyse de données et prise de
-        Décisions, je recherche un stage de fin d’études en Décision / Data Science / Machine Learning. Ma démarche s’appuie sur une 
-        solide maîtrise de la programmation et de l'algorithmie, que je souhaite mettre à profit pour optimiser vos solutions en Data Science et Machine Learning.
-        Fort d’une expérience sur des projets liés à l’Industrie 4.0, j’ai à cœur de transformer la donnée en un véritable levier de performance pour faire évoluer 
-        des idées en solutions. 
-      </p>
-    </header>
-    <main>
-      <section id="experience" class="timeline p-4 md:p-8">
-        <h2 class="timeline-title text-2xl font-semibold mb-5 text-slate-800 little-extra">EXPERIENCE PROFESSIONNELLE</h2>
-        <div class="timeline-content flex items-center">
-          <div class="space-y-6 border-l-2 border-dashed border-orange-200">
-            <div class="w-full">
-              <span
-                class="-ml-0.5 text-orange-400 font-bold bg-orange-100 px-2 py-1"
-                >avril - juillet 2025 (4 mois)</span
-              >
-              <div class="ml-6 mt-2">
-                <h4 class="font-bold text-orange-400 text-lg">
-                  Laboratoire LaMé, Laboratoire LIFAT, <small class="text-orange-300">Blois (41)</small>
-                </h4>
-                <h5 class="text-orange-300">
-                  Stagiaire Recherche
-                </h5>
-                <h5 class="text-orange-300">
-                  <cite><b>Evaluation des dommages dans une poutre par étude vibratoire à l’aide de réseaux de neurones</b></cite>
-                </h5>
-                <p class="mt-2 max-w-screen-sm text-sm md:text-base text-slate-600">
-                  <ul class="text-slate-600">
-                    <li>Développement et architecture de réseaux de neurones de type Perceptron Multicouche (MLP) dédiés à l'identification de dommages structurels sous PyTorch</li>
-                    <li>Optimisation des performances du modèle via une stratégie d'ingénierie des données (data splitting et équilibrage des datasets et de la répartition des données)</li>
-                    <li>Validation expérimentale : confrontation des prédictions du modèle avec des essais vibratoires pour confirmer la fiabilité des simulations numériques (RDM6, MATLAB)</li>
-                  </ul>
-                </p>
-              </div>
+    </div>
+    <p class="md:text-base text-slate-700 mt-4 text-justify">
+      Futur ingénieur INSA en Génie des Systèmes Industriels, spécialisé en Acquisition et Analyse de données et prise de
+      Décisions, je recherche un stage de fin d’études en Décision / Data Science / Machine Learning. Ma démarche s’appuie sur une 
+      solide maîtrise de la programmation et de l'algorithmie, que je souhaite mettre à profit pour optimiser vos solutions en Data Science et Machine Learning.
+      Fort d’une expérience sur des projets liés à l’Industrie 4.0, j’ai à cœur de transformer la donnée en un véritable levier de performance pour faire évoluer 
+      des idées en solutions. 
+    </p>
+  </header>
+</div>
+<main>
+  <section id="experience" class="timeline p-4 md:p-8">
+    <h2 class="timeline-title text-2xl font-semibold mb-5 text-slate-800 little-extra">EXPERIENCE PROFESSIONNELLE</h2>
+    <div class="timeline-content flex items-center">
+      <div class="space-y-6 border-l-2 border-dashed border-orange-200">
+        {% for experience in site.data.experiences %}
+        <div class="w-full">
+          <span class="-ml-0.5 text-orange-400 font-bold bg-orange-100 px-2 py-1">{{ experience.period }}</span>
+          <div class="ml-6 mt-2">
+            <h4 class="font-bold text-orange-400 text-lg">
+              {{ experience.organization }}, <small class="text-orange-300">{{ experience.location }}</small>
+            </h4>
+            {% if experience.role %}
+            <h5 class="text-orange-300">
+              {{ experience.role }}
+            </h5>
+            {% endif %}
+            {% if experience.mission %}
+            <h5 class="text-orange-300">
+              <cite><b>{{ experience.mission }}</b></cite>
+            </h5>
+            {% endif %}
+            {% if experience.details and experience.details.size > 0 %}
+            <div class="mt-2 max-w-screen-sm text-sm md:text-base text-slate-600">
+              <ul class="text-slate-600 list-disc list-inside">
+                {% for detail in experience.details %}
+                <li>{{ detail }}</li>
+                {% endfor %}
+              </ul>
             </div>
-            <div class="w-full">
-              <span
-                class="-ml-0.5 text-orange-400 font-bold bg-orange-100 px-2 py-1"
-                >juillet 2024 (1 mois) et juillet 2023 (1 mois)</span
-              >
-              <div class="ml-6 mt-2">
-                <h4 class="font-bold text-orange-400 text-lg">
-                  SGAMI, <small class="text-orange-400">Lyon (69)</small>
-                </h4>
-                <h5 class="text-orange-300">
-                  Contractuel
-                </h5>
-              </div>
-            </div>
-            <div class="w-full">
-              <span
-                class="-ml-0.5 text-orange-400 font-bold bg-orange-100 px-2 py-1"
-                >juillet 2022 (1 mois)</span
-              >
-              <div class="ml-6 mt-2">
-                <h4 class="font-bold text-orange-400 text-lg">
-                  FIMA SAS (Franchise McDonald's), <small class="text-orange-400">Lyon (69)</small>
-                </h4>
-                <h5 class="text-orange-300">
-                  Équipier polyvalent
-                </h5>
-              </div>
-            </div>
+            {% endif %}
           </div>
         </div>
-      </section>
-      <section id="formation" class="timeline p-4 md:p-8">
-        <h2 class="timeline-title text-2xl font-semibold mb-5 text-slate-800 little-extra">FORMATION</h2>
-        <div class="timeline-content flex items-center">
-          <div class="space-y-6 border-l-2 border-dashed border-orange-200">
-            <div class="w-full">
-              <span
-                class="-ml-0.5 text-orange-400 font-bold bg-orange-100 px-2 py-1"
-                >2021-2026</span
-              >
-              <div class="ml-6 mt-2">
-                <h4 class="font-bold text-orange-400 text-lg">
-                  Ecole d’ingénieur INSA Centre Val de Loire, <small class="text-orange-400">Blois (41)</small>
-                </h4>
-                <h5 class="text-orange-300">
-                  Cycle ingénieur Génie des Systèmes Industriels
-                </h5>
-                <p class="mt-2 max-w-screen-sm text-sm md:text-base text-slate-600">
-                  <ul class="text-slate-600">
-                    <li>Pré-orientation option Acquisition Analyse et Décision </li>
-                    <li>Projet de 1ere année : conception d’une serre autonome connectée, couple ESP32/Raspberry PI, technologie LoRa et wifi</li>
-                    <li>Projet de fin d'études: Étude des données de santé et développement d'un modèle d'IA pour la détection précoce de migraines chez un patient</li>
-                  </ul>
-                </p>
-              </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  <section id="formation" class="timeline p-4 md:p-8">
+    <h2 class="timeline-title text-2xl font-semibold mb-5 text-slate-800 little-extra">FORMATION</h2>
+    <div class="timeline-content flex items-center">
+      <div class="space-y-6 border-l-2 border-dashed border-orange-200">
+        {% for formation in site.data.formations %}
+        <div class="w-full">
+          <span class="-ml-0.5 text-orange-400 font-bold bg-orange-100 px-2 py-1">{{ formation.period }}</span>
+          <div class="ml-6 mt-2">
+            <h4 class="font-bold text-orange-400 text-lg">
+              {{ formation.school }}, <small class="text-orange-400">{{ formation.location }}</small>
+            </h4>
+            <h5 class="text-orange-300">
+              {{ formation.program }}
+            </h5>
+            {% if formation.details and formation.details.size > 0 %}
+            <div class="mt-2 max-w-screen-sm text-sm md:text-base text-slate-600">
+              <ul class="text-slate-600 list-disc list-inside">
+                {% for detail in formation.details %}
+                <li>{{ detail }}</li>
+                {% endfor %}
+              </ul>
             </div>
-            <div class="w-full">
-              <span
-                class="-ml-0.5 text-orange-400 font-bold bg-orange-100 px-2 py-1"
-                >2024-2025 <small class="text-orange-300">(Semestre d'hiver)</small>  </span
-              >
-              <div class="ml-6 mt-2">
-                <h4 class="font-bold text-orange-400 text-lg">
-                  Brno University of Technology, <small class="text-orange-400">Brno (République Tchèque)</small>
-                  <br>
-                  <small>Faculty of Mechanical Engineering</small>
-                </h4>
-                <h5 class="text-orange-300">
-                  Mobilité académique internationale (Erasmus)
-                </h5>
-                <p class="mt-2 max-w-screen-sm text-sm md:text-base text-slate-600">
-                  Développement des compétences linguistiques techniques, adaptation à un contexte interculturel et participation à des projets collaboratifs internationaux. 
-                  <br>
-                  Main topics:
-                  <ul>
-                  <li>- Computer Science and Signal Processing using MATLAB,</li>
-                  <li>- Manufacturing Machines Technology and Theory of Machining</li>
-                  <li>- Renewable Energy Sources (Introduction)</li>
-                  <li>- Czech Language (Beginner)Winter </li>
-                  </ul>
-                </p>
-              </div>
-            </div>
-            <div class="w-full">
-              <span
-                class="-ml-0.5 text-orange-400 font-bold bg-orange-100 px-2 py-1"
-                >2021</span
-              >
-              <div class="ml-6 mt-2">
-                <h4 class="font-bold text-orange-400 text-lg">
-                  Baccalauréat
-                  <br />
-                  Lycée Cité Scolaire Internationale, <small class="text-orange-300">Lyon (69)</small>
-                </h4>
-                <p class="mt-2 max-w-screen-sm text-sm md:text-base text-slate-600">
-                  Spécialités Mathématiques et Physique-Chimie<br>Mention Très Bien, Section Européenne (Allemand)
-                </p>
-              </div>
-            </div>
+            {% endif %}
           </div>
         </div>
-      </section>
-      <section id="competences" class="p-4 md:p-8">
-        <h2 class="text-2xl font-semibold mb-3 text-slate-800 little-extra">COMPETENCES</h2>
-        <div id="conteneur-competences" class="flex flex-wrap flex-col space-y-2">
-          <!-- contenu généré par index.js -->
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  <section id="competences" class="p-4 md:p-8">
+    <h2 class="text-2xl font-semibold mb-3 text-slate-800 little-extra">COMPETENCES</h2>
+    <div id="conteneur-competences" class="flex flex-wrap flex-col space-y-2">
+      {% for competence in site.data.competences %}
+      <div class="flex flex-wrap gap-2">
+        <h5 class="text-lg font-semibold">{{ competence.label }} :</h5>
+        {% for item in competence.contenu %}
+        <span class="bg-orange-200 text-sm rounded-md py-1 px-2 text-orange-600">{{ item }}</span>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  <section id="projets" class="p-4 md:p-8">
+    <h2 class="text-2xl font-semibold mb-3 text-slate-800 little-extra">PROJETS</h2>
+    <div id="conteneur-projets" class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-2 projet-container">
+      {% for projet in site.data.projets reversed %}
+      <div class="border border-slate-300 rounded-md px-2 py-1 md:px-4 md:py-2 flex flex-col space-y-1 shadow projet-item">
+        <h5 class="text-lg font-semibold">{{ projet.titre }}</h5>
+        <p class="subtext">{{ projet.date }}</p>
+        <p class="text-justify">{{ projet.description }}</p>
+        <div class="flex flex-wrap gap-2 projet-tags">
+          {% for tag in projet.tags %}
+          <span class="projet-tag bg-orange-100 text-orange-400">{{ tag }}</span>
+          {% endfor %}
         </div>
-      </section>
-      <section id="projets" class="p-4 md:p-8">
-        <h2 class="text-2xl font-semibold mb-3 text-slate-800 little-extra">PROJETS</h2>
-        <div id="conteneur-projets" class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-2 projet-container">
-          <!-- contenu généré par index.js -->
-        </div> 
-      </section>
-      <footer class="p-4 md:p-8 text-slate-600 flex flex-col md:flex-row justify-center items-center space-x-4">
-        <img src="qrcode.png" alt="QR Code vers cette page" class="h-48 w-48"/>
-        <div class="text-center md:text-start">
-          <p>Paul Martinez - 2025</p>
-          <p>Site web réalisé avec HTML, CSS (TailwindCSS) et JavaScript</p>
-          <p>Hébergement via GitHub Pages</p>
-          <p>Dernière mise à jour : janvier 2026</p>
+        {% if projet.liens and projet.liens.size > 0 %}
+        <div class="flex flex-wrap space-x-2 projet-liens">
+          {% for lien in projet.liens %}
+          <a href="{{ lien.url }}" target="_blank">{{ lien.label }}</a>
+          {% endfor %}
         </div>
-      </footer>
-    </main>
-  </body>
-</html>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div> 
+  </section>
+  <section id="blog" class="p-4 md:p-8">
+    <div class="flex items-center justify-between">
+      <h2 class="text-2xl font-semibold mb-3 text-slate-800 little-extra">DERNIERS ARTICLES</h2>
+      <a href="{{ '/blog/' | relative_url }}" class="text-orange-500 underline hover:text-orange-600">Voir tout</a>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {% for post in site.posts limit: 2 %}
+      <article class="border border-slate-200 rounded-lg p-4 shadow-sm space-y-2">
+        <p class="text-sm text-orange-400 font-semibold">{{ post.date | date: "%-d %B %Y" }}</p>
+        <h3 class="text-xl font-semibold text-slate-900">
+          <a href="{{ post.url | relative_url }}" class="hover:text-orange-500">{{ post.title }}</a>
+        </h3>
+        {% if post.description %}
+        <p class="text-slate-700">{{ post.description }}</p>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  <footer class="p-4 md:p-8 text-slate-600 flex flex-col md:flex-row justify-center items-center space-x-4">
+    <img src="{{ '/qrcode.png' | relative_url }}" alt="QR Code vers cette page" class="h-48 w-48"/>
+    <div class="text-center md:text-start">
+      <p>Paul Martinez - 2025</p>
+      <p>Site web réalisé avec Jekyll, HTML, CSS (TailwindCSS) et JavaScript</p>
+      <p>Hébergement via GitHub Pages</p>
+      <p>Dernière mise à jour : janvier 2026</p>
+    </div>
+  </footer>
+</main>
