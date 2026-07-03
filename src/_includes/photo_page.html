@@ -1,0 +1,17 @@
+{% if site.data.photos and site.data.photos.size > 0 %}
+  <div class="photo-grid">
+    {% for photo in site.data.photos %}
+      <div class="photo-item">
+        <img src="{{ photo.src | relative_url }}"
+             alt="{{ photo.alt | default: '' }}"
+             loading="lazy" />
+      </div>
+    {% endfor %}
+  </div>
+{% else %}
+  <div class="flex items-center justify-center min-h-[70vh]">
+    <p class="text-zinc-700 text-sm tracking-widest uppercase select-none">
+      À venir
+    </p>
+  </div>
+{% endif %}

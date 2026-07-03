@@ -1,0 +1,40 @@
+---
+layout: default
+---
+{% assign _lang = page.lang | default: 'fr' %}
+{% assign t = site.data.i18n[_lang] %}
+<div>
+  <nav class="text-sm text-zinc-500 dark:text-zinc-400 md:mt-0 mb-8">
+    <a href="{{ '/blog/' | relative_url }}"
+      class="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">← Tous les articles</a>
+  </nav>
+  <article>
+    <header class="mb-8 space-y-3">
+      {% assign _words = content | number_of_words %}
+      {% assign _reading_time = _words | divided_by: 200.0 | ceil | at_least: 1 %}
+      <div
+        class="flex items-center gap-2 text-xs md:font-semibold uppercase tracking-wide text-amber-500">
+        <time>{% include localized_date.html date=page.date %}</time>
+        <span aria-hidden="true">·</span>
+        <span>{{ _reading_time }} min</span>
+      </div>
+      <h1 class="text-2xl md:text-4xl font-bold md:font-extrabold text-zinc-800 dark:text-zinc-100 tracking-tight leading-tight">
+        {{ page.title }}
+      </h1>
+      {% if page.description %}
+      <p class="text-zinc-600 dark:text-zinc-400 text-sm md:text-base leading-relaxed">{{ page.description }}</p>
+      {% endif %}
+      {% if page.tags %}
+      <div class="flex flex-wrap gap-1.5 pt-1">
+        {% for tag in page.tags %}
+        <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </header>
+
+    <div class="post-content text-zinc-800 dark:text-zinc-200 leading-relaxed">
+      {{ content }}
+    </div>
+  </article>
+</div>

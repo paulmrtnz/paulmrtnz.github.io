@@ -1,0 +1,153 @@
+- titre: "Connected Greenhouse IoT"
+  icone: "sprout"
+  date: "June 2022"
+  description: "Design project for a connected greenhouse with a system for controlling humidity, temperature, and lighting."
+  tags:
+    - "1<sup>st</sup> year INSA"
+    - "Team project"
+    - "IoT"
+    - "Arduino"
+    - "LoRA"
+  liens: []
+
+- titre: "C Project - Battleship Game"
+  icone: "anchor"
+  date: "January 2025"
+  description: "Programming a battleship game in C with SDL graphical interface."
+  tags:
+    - "2<sup>nd</sup> year INSA"
+    - "Group"
+    - "C"
+    - "SDL"
+  liens:
+    - url: "https://github.com/paulmrtnz/bataille-navale-en-C"
+      label: "GitHub"
+
+# - titre: "Redesign - INSA Student Cafeteria Website"
+#   date: "2023"
+#   description: "Redesign of the INSA CVL student cafeteria website."
+#   tags:
+#     - "Group"
+#     - "CSS"
+#     - "PHP"
+#   liens:
+#     - url: "https://cafet.insa-cvl.org/"
+#       label: "Website"
+
+- titre: "Naïve Bayes Classifier in Python"
+  icone: "brain"
+  date: "June 2024"
+  description: "Introduction to experimental research. Writing a Python script to classify data using a naïve Bayes classifier."
+  tags:
+    - "3<sup>rd</sup> year INSA"
+    - "Group"
+    - "Python"
+  liens:
+    - url: "https://github.com/paulmrtnz/naive-bayes-classifier-python"
+      label: "GitHub"
+
+# - titre: "The Menutator"
+#   date: "January 2025"
+#   description: "Python application to generate your weekly menu from locally registered dishes."
+#   tags:
+#     - "Python"
+#   liens: []
+
+- titre: "Snake in C++"
+  icone: "gamepad-2"
+  date: "March 2025"
+  description: "Snake game developed in C++ with a graphical interface using Qt."
+  tags:
+    - "C++"
+    - "Game"
+    - "Git"
+    - "Qt Lite"
+  liens:
+    - url: "https://github.com/paulmrtnz/snake-game-cpp"
+      label: "GitHub"
+
+- titre: "Virtual Instrumentation Integration of a Laser Vibrometer"
+  icone: "activity"
+  date: "October 2025"
+  description: "Programming a control and data acquisition class in Python for a Polytec laser vibrometer and integration with a user interface."
+  tags:
+    - "5<sup>th</sup> year INSA"
+    - "Acquisition / Instrumentation"
+    - "Group"
+    - "Python"
+    - "GPIB / VISA"
+    - "Serial Communication"
+  liens: []
+
+- titre: "IoT Project - Industrial AGV"
+  icone: "bot"
+  date: "October 2025"
+  description: "Design and implementation of an automated guided vehicle (AGV) with line-following capability and Bluetooth IoT communication for remote monitoring and control via a web application."
+  tags:
+    - "Master's"
+    - "IoT"
+    - "Arduino"
+    - "FastAPI"
+    - "BLE (Bleak)"
+  liens:
+    - url: "https://github.com/paulmrtnz/INSA-M2-Smart-AGV-IoT"
+      label: "GitHub"
+
+- titre: "K3"
+  icone: "network"
+  date: "November 2025"
+  featured: true
+  description: "React web application to manage and visualize the player graph for the Killer game. This application enables real-time tracking of targets, eliminations, and player status through an interactive visual graph."
+  tags:
+    - "React + ReactFlow (TypeScript)"
+    - "Firebase (Auth + Firestore)"
+    - "UI / UX"
+  liens:
+    - url: "https://github.com/paulmrtnz/kill3r"
+      label: "GitHub"
+
+- titre: "Capstone Project: Migraine Detection with AI"
+  icone: "heart-pulse"
+  date: "2024-2025"
+  featured: true
+  description: "Study of Apple HealthKit health data and development of an AI model for early migraine detection in patients."
+  tags:
+    - "Capstone"
+    - "PyTorch"
+    - "Apple HealthKit"
+  liens: []
+
+- titre: "4th-year Internship: Structural Damage Detection with Deep Learning"
+  icone: "waves"
+  date: "Apr. - Jul. 2025"
+  description: "Structural damage detection in a beam via vibration analysis, using a neural network model validated experimentally against simulated vibration tests."
+  tags:
+    - "Internship"
+    - "PyTorch"
+    - "MATLAB"
+  liens: []
+
+- titre: "My portfolio / blog"
+  icone: "code"
+  date: "June - July 2026"
+  description: "The website you are on! Created with Jekyll and TailwindCSS. Published on GitHub Pages with a GitHub Actions configuration."
+  featured: true
+  tags:
+    - "Jekyll"
+    - "GitHub Actions"
+  liens:
+    - url: "https://github.com/paulmrtnz/paulmrtnz.github.io"
+      label: "GitHub"
+
+- titre: "5th-year Internship: Deep Learning for Side-Channel Analysis"
+  icone: "shield"
+  date: "since March 2026"
+  featured: true
+  description: "Development of deep learning tools for side-channel analysis, industrializing the research pipeline (MLflow, Hydra) and optimizing PyTorch DataLoaders for large HDF5 datasets."
+  tags:
+    - "Internship"
+    - "MLOps"
+    - "PyTorch"
+    - "MLflow"
+    - "Hydra"
+  liens: []

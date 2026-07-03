@@ -1,0 +1,153 @@
+- titre: "Serre connectée IoT"
+  icone: "sprout"
+  date: "mars - juin 2022"
+  description: "Projet de conception d'une serre connectée, avec un système de contrôle d'humidité, de température et de luminosité."
+  tags:
+    - "1<sup>ère</sup> année INSA"
+    - "En équipe"
+    - "IoT"
+    - "Arduino"
+    - "LoRA"
+  liens: []
+
+- titre: "Projet C - Bataille navale"
+  icone: "anchor"
+  date: "janv. 2025"
+  description: "Programmation en C d'un jeu de bataille navale avec interface graphique SDL."
+  tags:
+    - "2<sup>ème</sup> année INSA"
+    - "Groupe"
+    - "C"
+    - "SDL"
+  liens:
+    - url: "https://github.com/paulmrtnz/bataille-navale-en-C"
+      label: "GitHub"
+
+# - titre: "Redesign - Site Cafet étudiante de l'INSA"
+#   date: "2023"
+#   description: "Réécriture du design du site de la cafétéria étudiante de l'INSA CVL."
+#   tags:
+#     - "Groupe"
+#     - "CSS"
+#     - "PHP"
+#   liens:
+#     - url: "https://cafet.insa-cvl.org/"
+#       label: "Site web"
+
+- titre: "Classificateur naïf Bayésien en python"
+  icone: "brain"
+  date: "main - juin 2024"
+  description: "Introduction à la recherche expérimentale. Écriture d'un script python pour classifier des données en utilisant un classificateur naïf Bayésien."
+  tags:
+    - "3<sup>ème</sup> année INSA"
+    - "Groupe"
+    - "Python"
+  liens:
+    - url: "https://github.com/paulmrtnz/naive-bayes-classifier-python"
+      label: "GitHub"
+
+# - titre: "Le Menutator"
+#   date: "janvier 2025"
+#   description: "Application python pour générer son menu de la semaine, à partir de plats enregistrés localement."
+#   tags:
+#     - "Python"
+#   liens: []
+
+- titre: "Snake en C++"
+  icone: "gamepad-2"
+  date: "févr. - avril. 2025"
+  description: "Jeu Snake développé en C++ avec une interface graphique sous Qt."
+  tags:
+    - "C++"
+    - "Jeu"
+    - "Git"
+    - "Qt Lite"
+  liens:
+    - url: "https://github.com/paulmrtnz/snake-game-cpp"
+      label: "GitHub"
+
+- titre: "Intégration de l'instrumentation virtuelle d'un vibromètre laser"
+  icone: "activity"
+  date: "sept. - nov. 2025"
+  description: "Programmation en Python d'une classe de contrôle et d'acquisition de données pour un vibromètre laser Polytec et intégration avec une interface utilisateur."
+  tags:
+    - "5<sup>ème</sup> année INSA"
+    - "Acquisition / Instrumentation"
+    - "Groupe"
+    - "Python"
+    - "GPIB / VISA"
+    - "Liaison série"
+  liens: []
+
+- titre: "AGV industriel"
+  icone: "bot"
+  date: "sept. - nov. 2025"
+  description: "Conception et réalisation d'un véhicule autoguidé (AGV) suiveur de ligne avec communication IoT en Bluetooth pour le suivi et le contrôle à distance via une application web."
+  tags:
+    - "Master"
+    - "IoT"
+    - "Arduino"
+    - "FastAPI"
+    - "BLE (Bleak)"
+  liens:
+    - url: "https://github.com/paulmrtnz/INSA-M2-Smart-AGV-IoT"
+      label: "GitHub"
+
+- titre: "K3"
+  icone: "network"
+  date: "nov. 2025"
+  featured: true
+  description: "Application web React pour gérer et visualiser le graphe des joueurs du jeu Killer. Cette application permet de suivre en temps réel les cibles, les éliminations et l'état des joueurs à travers un graphe visuel interactif."
+  tags:
+    - "React + ReactFlow (TypeScript)"
+    - "Firebase (Auth + Firestore)"
+    - "UI / UX"
+  liens:
+    - url: "https://github.com/paulmrtnz/kill3r"
+      label: "GitHub"
+
+- titre: "Projet de fin d'études: Détection de migraines avec un modèle d'IA"
+  icone: "heart-pulse"
+  date: "sept. - déc. 2025"
+  featured: true
+  description: "Etude des données de santé Apple HealthKit et développement d'un modèle d'IA pour la détection précoce de migraines chez un patient."
+  tags:
+    - "PFE"
+    - "Pytorch"
+    - "Apple HealthKit"
+  liens: []
+
+- titre: "Stage M1 : Détection de dommages structurels par Deep Learning"
+  icone: "waves"
+  date: "avr. - juil. 2025"
+  description: "Détection de dommages structurels dans une poutre par étude vibratoire, à l'aide d'un modèle de réseau de neurones validé expérimentalement face à des essais vibratoires simulés."
+  tags:
+    - "Stage"
+    - "Pytorch"
+    - "MATLAB"
+  liens: []
+
+- titre: "Mon portfolio / blog"
+  icone: "code"
+  date: "juin - juil. 2026"
+  description: "Le site sur lequel vous êtes! Créé avec Jekyll et TailwindCSS. Publié sur GitHub Pages avec une configuration GitHub Actions. Tests unitaires en Ruby."
+  featured: true
+  tags:
+    - "Jekyll"
+    - "GitHub Actions"
+  liens:
+    - url: "https://github.com/paulmrtnz/paulmrtnz.github.io"
+      label: "GitHub"
+
+- titre: "Stage M2 : Deep Learning pour l'analyse Side-Channel"
+  icone: "shield"
+  date: "depuis mars 2026"
+  description: "Développement d'outils de Deep Learning pour l'analyse par canaux auxiliaires (side-channel), avec industrialisation du pipeline de recherche (MLflow, Hydra) et DataLoaders PyTorch optimisés pour de volumineux datasets HDF5."
+  tags:
+    - "Stage"
+    - "MLOps"
+    - "Pytorch"
+    - "MLflow"
+    - "Hydra"
+  liens: []
+  featured: true
