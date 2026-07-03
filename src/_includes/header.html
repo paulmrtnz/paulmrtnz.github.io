@@ -1,0 +1,140 @@
+{% if page.lang == 'fr' %}
+  {% assign url_home     = '/' %}
+  {% assign url_projects = '/projects/' %}
+  {% assign url_blog     = '/blog/' %}
+  {% assign url_photo    = '/photo/' %}
+  {% assign label_home = 'Accueil' %}
+  {% assign label_projects = 'Projets' %}
+  {% assign label_photo = 'Photographie' %}
+  {% assign lang_alt = page.lang_alt_url | default: '/en/' %}
+{% else %}
+  {% assign url_home     = '/en/' %}
+  {% assign url_projects = '/en/projects/' %}
+  {% assign url_blog     = '/en/blog/' %}
+  {% assign url_photo    = '/photo/' %}
+  {% assign label_home = 'Home' %}
+  {% assign label_projects = 'Projects' %}
+  {% assign label_photo = 'Photography' %}
+  {% assign lang_alt = page.lang_alt_url | default: '/' %}
+{% endif %}
+
+<div class="flex place-content-end sm:place-content-center p-2 sm:py-6 sticky top-0 z-50">
+  <div class="relative flex flex-col sm:place-content-center place-content-end w-full sm:w-auto">
+
+    <!-- Pill nav -->
+    <nav class="flex w-fit self-end bg-white/85 dark:bg-zinc-900/85 backdrop-blur-md rounded-full p-1.5 shadow-lg ring-1 ring-black/5 dark:ring-white/10 squircle">
+
+      <!-- Logo -->
+      <a href="{{ url_home | relative_url }}" class="flex items-center gap-2 px-2 py-1 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors shrink-0 mr-2">
+        <span class="font-semibold text-sm text-zinc-900 dark:text-zinc-100">Paul</span>
+      </a>
+
+      <!-- Desktop nav items (hidden on mobile) -->
+      <div class="hidden sm:flex items-center gap-1 w-100">
+        <!-- <span class="text-zinc-300 dark:text-zinc-700 select-none px-0.5">·</span> -->
+        <a href="{{ url_projects | relative_url }}"
+           class="px-3 py-1.5 rounded-full text-sm font-medium transition-colors
+                  {% if page.url contains '/projects' %}bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100{% else %}text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-800{% endif %}">
+          {{ label_projects }}
+        </a>
+        <a href="{{ url_blog | relative_url }}"
+           class="px-3 py-1.5 rounded-full text-sm font-medium transition-colors
+                  {% if page.url contains '/blog' %}bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100{% else %}text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-800{% endif %}">
+          Blog
+        </a>
+        <a href="{{ url_photo | relative_url }}"
+           class="px-3 py-1.5 rounded-full text-sm font-medium transition-colors
+                  {% if page.url contains '/photo' %}bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100{% else %}text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-800{% endif %}">
+          {{ label_photo }}
+        </a>
+        <span class="text-zinc-300 dark:text-zinc-700 select-none px-0.5">·</span>
+        <div class="flex items-center gap-1">
+          {% if page.lang == 'fr' %}
+            <span class="p-1.5 rounded-full opacity-100" aria-label="Français" title="Français">{% include flag.html code='fr' class='h-3.5 w-5 rounded-sm shrink-0' %}</span>
+          {% else %}
+            <a href="{{ lang_alt }}" class="p-1.5 rounded-full opacity-50 hover:opacity-100 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition" aria-label="Français" title="Français">{% include flag.html code='fr' class='h-3.5 w-5 rounded-sm shrink-0' %}</a>
+          {% endif %}
+          {% if page.lang == 'en' %}
+            <span class="p-1.5 rounded-full opacity-100" aria-label="English" title="English">{% include flag.html code='gb' class='h-3.5 w-5 rounded-sm shrink-0' %}</span>
+          {% else %}
+            <a href="{{ lang_alt }}" class="p-1.5 rounded-full opacity-50 hover:opacity-100 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition" aria-label="English" title="English">{% include flag.html code='gb' class='h-3.5 w-5 rounded-sm shrink-0' %}</a>
+          {% endif %}
+        </div>
+        <span class="text-zinc-300 dark:text-zinc-700 select-none px-0.5">·</span>
+        <button type="button" onclick="window.toggleTheme()"
+                class="flex items-center gap-1.5 p-2 mr-1 rounded-full text-sm font-medium text-zinc-600 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors cursor-pointer select-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 block dark:hidden shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+          </svg>
+          <!-- <span class="block dark:hidden">Dark</span> -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 hidden dark:block shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+          </svg>
+          <!-- <span class="hidden dark:block">Light</span> -->
+        </button>
+      </div>
+
+      <!-- Hamburger button (mobile only) -->
+      <button type="button" id="hamburger-btn"
+              onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+              class="sm:hidden p-2 rounded-full text-zinc-600 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors cursor-pointer"
+              aria-label="Menu">
+        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+    </nav>
+
+    <!-- Mobile dropdown menu -->
+    <div id="mobile-menu" class="hidden sm:hidden absolute top-full right-0 mt-2 w-full bg-white/90 dark:bg-zinc-900/90 backdrop-blur-md squircle shadow-xl ring-1 ring-black/5 dark:ring-white/10 p-2.5">
+      <div class="flex flex-col gap-0.5 text-sm font-medium">
+        <a href="{{ url_home | relative_url }}"
+           class="flex items-center px-3 py-2.5 rounded-[14px] transition-colors
+                  {% if page.url == url_home %}bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100{% else %}text-zinc-600 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800{% endif %}">
+          {{ label_home }}
+        </a>
+        <a href="{{ url_projects | relative_url }}"
+           class="flex items-center px-3 py-2.5 rounded-[14px] transition-colors
+                  {% if page.url contains '/projects' %}bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100{% else %}text-zinc-600 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800{% endif %}">
+          {{ label_projects }}
+        </a>
+        <a href="{{ url_blog | relative_url }}"
+           class="flex items-center px-3 py-2.5 rounded-[14px] transition-colors
+                  {% if page.url contains '/blog' %}bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100{% else %}text-zinc-600 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800{% endif %}">
+          Blog
+        </a>
+        <a href="{{ url_photo | relative_url }}"
+           class="flex items-center px-3 py-2.5 rounded-[14px] transition-colors
+                  {% if page.url contains '/photo' %}bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100{% else %}text-zinc-600 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800{% endif %}">
+          {{ label_photo }}
+        </a>
+        <div class="h-px bg-zinc-100 dark:bg-zinc-800 my-1"></div>
+        <div class="flex place-content-between">
+          <div class="flex items-center gap-2 px-3 py-2 flex-grow">
+            <span class="text-xs font-semibold text-zinc-500 dark:text-zinc-400">
+              {% if page.lang == 'fr' %}Langue{% else %}Language{% endif %} :
+            </span>
+            {% if page.lang == 'fr' %}
+              <span class="p-1 rounded-full bg-zinc-100 dark:bg-zinc-800 opacity-100" aria-label="Français" title="Français">{% include flag.html code='fr' class='h-3.5 w-5 rounded-sm shrink-0' %}</span>
+              <a href="{{ lang_alt }}" class="p-1 rounded-full opacity-50 hover:opacity-100 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition" aria-label="English" title="English">{% include flag.html code='gb' class='h-3.5 w-5 rounded-sm shrink-0' %}</a>
+            {% else %}
+              <a href="{{ lang_alt }}" class="p-1 rounded-full opacity-50 hover:opacity-100 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition" aria-label="Français" title="Français">{% include flag.html code='fr' class='h-3.5 w-5 rounded-sm shrink-0' %}</a>
+              <span class="p-1 rounded-full bg-zinc-100 dark:bg-zinc-800 opacity-100" aria-label="English" title="English">{% include flag.html code='gb' class='h-3.5 w-5 rounded-sm shrink-0' %}</span>
+            {% endif %}
+          </div>
+          <button type="button" onclick="window.toggleTheme()"
+                  class="flex items-center gap-2 px-3 py-2.5 rounded-[14px] text-left text-zinc-600 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 block dark:hidden shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 hidden dark:block shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

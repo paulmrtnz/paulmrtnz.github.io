@@ -1,0 +1,135 @@
+{% assign t = site.data.i18n[page.lang] %}
+{% assign data = site.data[page.lang] %}
+
+<div class="flex flex-col gap-4">
+  <!-- Hero card -->
+  <div class="sm:p-4 md:p-8 flex flex-col gap-4 md:gap-8 items-stretch">
+    <div class="flex flex-col sm:flex-row items-start gap-2 md:gap-4 sm:gap-7">
+      <div class="flex-1 flex flex-col gap-4">
+        <div>
+          <h1
+            class="tracking-tight leading-none align-baseline gap-2 text-2xl md:text-4xl font-normal text-amber-500 dark:text-amber-500 mb-1"
+            style="font-family: 'Chilanka', cursive;">
+            {{ t.hero_greeting }}
+            <span class="text-zinc-900 dark:text-zinc-100 font-extrabold">{{ data.profile.name }}</span>
+          </h1>
+          <p class="text-lg text-zinc-600 dark:text-zinc-400">{{ data.profile.hook }}</p>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <a href="https://linkedin.com/in/paul-martinez-paul" target="_blank" rel="noopener noreferrer"
+            class="btn-brand">
+            <svg class="h-4 w-4 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd"
+                d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"
+                clip-rule="evenodd" />
+            </svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/paulmrtnz" target="_blank" rel="noopener noreferrer" class="btn-dark">
+            <svg class="h-4 w-4 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd"
+                d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z"
+                clip-rule="evenodd" />
+            </svg>
+            GitHub
+          </a>
+        </div>
+
+      </div>
+    </div>
+    <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+      {{ data.profile.description}}
+    </p>
+  </div>
+
+  <!-- Derniers articles -->
+  {% if site.posts.size > 0 %}
+  <div>
+    <div class="flex items-center justify-between mb-2 md:mb-4 md:px-2">
+      <h2 class="section-title mb-0">
+        <span class="section-title-bar"></span>
+        {{ t.recent_posts_title }}
+      </h2>
+      {% if page.lang == 'fr' %}{% assign blog_url = '/blog/' %}{% else %}{% assign blog_url =
+      '/en/blog/' %}{% endif %}
+      <a href="{{ blog_url | relative_url }}"
+        class="link-see-more">
+        {{ t.view_all_posts }}
+      </a>
+    </div>
+    <div class="flex flex-col gap-2">
+      {% for post in site.posts limit: 2 %}
+      {% assign _words = post.content | number_of_words %}
+      {% assign _reading_time = _words | divided_by: 200.0 | ceil | at_least: 1 %}
+      <a href="{{ post.url | relative_url }}" class="article-card group">
+        <div class="article-header">
+          <div>
+            <time class="article-date">
+              {% include localized_date.html date=post.date %} · {{ _reading_time }} min
+            </time>
+            <h3 class="article-title">
+              {{ post.title }}
+            </h3>
+          </div>
+          <svg class="article-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </div>
+        {% if post.description %}
+        <p class="article-content">{{ post.description }}</p>
+        {% endif %}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- Featured projects -->
+  {% assign featured_projects = data.projects | where: "featured", true %}
+  {% if featured_projects.size > 0 %}
+  <div>
+    <div class="flex items-center justify-between mb-2 md:mb-4 md:px-2">
+      <h2 class="section-title mb-0">
+        <span class="section-title-bar"></span>
+        {{ t.featured_projects_title }}
+      </h2>
+      {% if page.lang == 'fr' %}{% assign projects_url = '/projects/' %}{% else %}{% assign projects_url =
+      '/en/projects/' %}{% endif %}
+      <a href="{{ projects_url | relative_url }}"
+        class="link-see-more">
+        {{ t.view_all_projects }}
+      </a>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+      {% for project in featured_projects reversed %}
+      <article class="project-card">
+        <div class="project-header">
+          <h3 class="project-title">
+            {% if project.icone %}
+            <i data-lucide="{{ project.icone }}" class="project-icon"></i>
+            {% endif %}
+            {{ project.titre }}
+          </h3>
+          {% if project.liens and project.liens.size > 0 %}
+          {% assign lien = project.liens.first %}
+          <a href="{{ lien.url }}" target="_blank" rel="noopener noreferrer"
+            class="project-link"
+            aria-label="{{ lien.label }}">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+          {% endif %}
+        </div>
+        <p class="project-date">{{ project.date }}</p>
+        <p class="project-content">{{ project.description }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+
+</div>

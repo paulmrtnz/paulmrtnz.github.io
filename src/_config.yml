@@ -1,0 +1,39 @@
+title: "Paul Martinez"
+description: "Portfolio et blog de Paul Martinez"
+url: "https://paulmrtnz.github.io"
+baseurl: ""
+lang: fr
+timezone: Europe/Paris
+author: Paul Martinez
+markdown: kramdown
+theme: null
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      author: Paul Martinez
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: default
+
+permalink: /blog/:title/
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .bundle/
+  - _site/
+  - node_modules/
+  - package.json
+  - package-lock.json
+  - tailwind.config.js
+  - css/input.css
