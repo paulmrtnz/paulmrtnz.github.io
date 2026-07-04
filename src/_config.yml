@@ -5,6 +5,7 @@ baseurl: ""
 lang: fr
 timezone: Europe/Paris
 author: Paul Martinez
+cloudinary_cloud_name: "o85gocup"
 markdown: kramdown
 theme: null
 plugins:

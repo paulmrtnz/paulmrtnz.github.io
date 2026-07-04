@@ -1,3 +1,10 @@
-# Ajouter chaque photo ici — src relatif à la racine du site
-# - src: /assets/imgs/photos/nom-du-fichier.jpg
-#   alt: "Description courte"
+# Ajouter chaque photo ici — id = Public ID Cloudinary, sans extension (juste le
+# nom du fichier si à la racine du Media Library, ou "dossier/nom" si rangé
+# dans un dossier). Le trouver via Cloudinary : clic sur la photo > Share >
+# Embed, et retirer l'extension (.jpg) — f_auto s'occupe du format.
+# alt = texte alternatif (accessibilité, court)
+# Exemple :
+# - id: "coucher-de-soleil-lac"
+#   alt: "Coucher de soleil sur le lac"
+# - id: "paul-martinez-myvN-LbiCyg-unsplash_whbruv"
+#   alt: "Photo de test"

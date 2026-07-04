@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 @layer utilities {
-  .squircle { border-radius: 22px; }
+  .squircle {
+    border-radius: 22px;
+  }
 }
 
 @layer components {
@@ -11,9 +13,7 @@
   /* ── Cards ─────────────────────────────────────────────────────── */
 
   .card {
-    @apply bg-white/75 dark:bg-zinc-900/70 backdrop-blur-lg squircle
-           overflow-hidden border border-gray-200 md:border-gray-100 hover:border-gray-300 dark:border-zinc-700/30 dark:hover:border-gray-500/30
-           flex flex-col px-4 py-3 md:p-5 transition-colors gap-2;
+    @apply bg-white/75 dark:bg-zinc-900/70 backdrop-blur-lg squircle overflow-hidden border border-gray-200 md:border-gray-100 hover:border-gray-300 dark:border-zinc-700/30 dark:hover:border-gray-500/30 flex flex-col px-4 py-3 md:p-5 transition-colors gap-2;
   }
 
   /* ── Article card (blog list + "derniers articles") ──────────────── */
@@ -39,9 +39,7 @@
   }
 
   .article-arrow {
-    @apply h-4 w-4 shrink-0 mt-0.5 text-zinc-400 dark:text-zinc-500 opacity-0 -translate-x-1
-           group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-amber-400 dark:group-hover:text-amber-300
-           transition-all;
+    @apply h-4 w-4 shrink-0 mt-0.5 text-zinc-400 dark:text-zinc-500 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-amber-400 dark:group-hover:text-amber-300 transition-all;
   }
 
   /* ── Project card (projects list + featured projects) ────────────── */
@@ -81,18 +79,15 @@
   /* ── Boutons ────────────────────────────────────────────────────── */
 
   .btn {
-    @apply inline-flex items-center gap-2 text-sm font-medium px-4 py-2
-           rounded-full shadow-sm;
+    @apply inline-flex items-center gap-2 text-sm font-medium px-4 py-2 rounded-full shadow-sm;
   }
 
   .btn-cta {
-    @apply btn bg-gradient-to-r from-amber-400 to-amber-600
-           hover:opacity-90 text-white transition-opacity;
+    @apply btn bg-gradient-to-r from-amber-400 to-amber-600 hover:opacity-90 text-white transition-opacity;
   }
 
   .btn-dark {
-    @apply btn bg-zinc-900 hover:bg-zinc-700 dark:bg-zinc-700
-           dark:hover:bg-zinc-600 text-white transition-colors;
+    @apply btn bg-zinc-900 hover:bg-zinc-700 dark:bg-zinc-700 dark:hover:bg-zinc-600 text-white transition-colors;
   }
 
   .btn-brand {
@@ -102,27 +97,21 @@
   /* ── Tags ───────────────────────────────────────────────────────── */
 
   .tag {
-    @apply text-xs px-2.5 py-0.5 rounded-full font-medium
-           bg-amber-200/40 dark:bg-amber-600/40
-           text-amber-500 dark:text-amber-200;
+    @apply text-xs px-2.5 py-0.5 rounded-full font-medium bg-amber-200/40 dark:bg-amber-600/40 text-amber-500 dark:text-amber-200;
   }
 
   /* ── Titres de section ──────────────────────────────────────────── */
 
   .section-title {
-    @apply text-lg md:text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-4
-           flex items-center gap-3;
+    @apply text-lg md:text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-4 flex items-center gap-3;
   }
 
   .section-title-bar {
-    @apply h-5 w-1 rounded-full shrink-0
-           bg-gradient-to-b from-amber-400 to-amber-600
-           dark:from-amber-500 dark:to-amber-300;
+    @apply h-5 w-1 rounded-full shrink-0 bg-gradient-to-b from-amber-400 to-amber-600 dark:from-amber-500 dark:to-amber-300;
   }
 
   .link-see-more {
-    @apply text-xs md:text-sm font-medium
-    text-zinc-500 dark:text-zinc-400 hover:text-amber-400 dark:hover:text-amber-300 transition-colors shrink-0
+    @apply text-xs md:text-sm font-medium text-zinc-500 dark:text-zinc-400 hover:text-amber-400 dark:hover:text-amber-300 transition-colors shrink-0
   }
 
   /* ── Timeline dot ───────────────────────────────────────────────── */
@@ -151,11 +140,27 @@
     margin-bottom: 0.5rem;
   }
 
-  .post-content p  { margin: 1rem 0; }
-  .post-content ul { list-style: disc;    padding-left: 1.5rem; margin: 1rem 0; }
-  .post-content ol { list-style: decimal; padding-left: 1.5rem; margin: 1rem 0; }
-  .post-content li { margin: 0.25rem 0; }
-  .post-content a  { 
+  .post-content p {
+    margin: 1rem 0;
+  }
+
+  .post-content ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+  }
+
+  .post-content ol {
+    list-style: decimal;
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+  }
+
+  .post-content li {
+    margin: 0.25rem 0;
+  }
+
+  .post-content a {
     @apply text-amber-400 dark:text-amber-500 hover:text-amber-400 dark:hover:text-amber-300 underline transition-colors;
   }
 
@@ -167,7 +172,10 @@
     font-family: ui-monospace, 'Cascadia Code', 'Fira Code', monospace;
   }
 
-  .dark .post-content code { background: #27272a; color: #e4e4e7; }
+  .dark .post-content code {
+    background: #27272a;
+    color: #e4e4e7;
+  }
 
   .post-content pre {
     background: #18181b;
@@ -181,7 +189,11 @@
     line-height: 1.75;
   }
 
-  .post-content pre code { background: none; padding: 0; font-size: inherit; }
+  .post-content pre code {
+    background: none;
+    padding: 0;
+    font-size: inherit;
+  }
 
   .post-content blockquote {
     border-left: 3px solid #F59E0B;
@@ -191,45 +203,68 @@
     margin: 1.25rem 0;
   }
 
-  .dark .post-content blockquote { color: #a1a1aa; border-left-color: #FBBF24; }
+  .dark .post-content blockquote {
+    color: #a1a1aa;
+    border-left-color: #FBBF24;
+  }
 
-  .post-content img { max-width: 100%; border-radius: 0.5rem; margin: 1rem 0; }
+  .post-content img {
+    max-width: 100%;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+  }
 
-  .post-content hr { border: none; border-top: 1px solid #e4e4e7; margin: 2rem 0; }
+  .post-content hr {
+    border: none;
+    border-top: 1px solid #e4e4e7;
+    margin: 2rem 0;
+  }
 
-  .dark .post-content hr { border-top-color: #3f3f46; }
+  .dark .post-content hr {
+    border-top-color: #3f3f46;
+  }
 
   /* ── Timeline spacing ───────────────────────────────────────────── */
 
-  .exp-item:nth-last-of-type(1) > div + div {
+  .exp-item:nth-last-of-type(1)>div+div {
     padding-bottom: 0;
   }
 
   /* ── Galerie photo (masonry CSS columns) ────────────────────────── */
 
+
   .photo-grid {
     columns: 2;
-    column-gap: 2px;
-    padding: 2px;
+    column-gap: 6px;
+    padding: 6px;
   }
 
-  @media (min-width: 768px)  { .photo-grid { columns: 3; } }
-  @media (min-width: 1280px) { .photo-grid { columns: 4; } }
+  @media (min-width: 768px) {
+    .photo-grid {
+      columns: 3;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .photo-grid {
+      columns: 4;
+    }
+  }
 
   .photo-item {
     break-inside: avoid;
-    margin-bottom: 2px;
+    margin-bottom: 6px;
     overflow: hidden;
     display: block;
   }
-
+  
   .photo-item img {
     width: 100%;
     display: block;
-    transition: transform 0.4s ease;
+    transition: transform 0.2s ease;
   }
 
-  .photo-item:hover img {
-    transform: scale(1.03);
+  .photo-item img:hover {
+    transform: scale(.99);
   }
 }

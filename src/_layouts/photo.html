@@ -11,18 +11,20 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+    rel="stylesheet">
 
   <script>
-    (function(){
-      var t=localStorage.getItem('theme');
-      if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme:dark)').matches)){
+    (function () {
+      var t = localStorage.getItem('theme');
+      if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme:dark)').matches)) {
         document.documentElement.classList.add('dark');
       }
     })();
-    window.toggleTheme=function(){
-      var isDark=document.documentElement.classList.toggle('dark');
-      localStorage.setItem('theme',isDark?'dark':'light');
+    window.toggleTheme = function () {
+      var isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
     };
   </script>
   <link rel="stylesheet" href="{{ '/css/styles.css' | relative_url }}" />
@@ -41,14 +43,18 @@
 
   {% include header.html %}
 
-  {{ content }}
+  <div class="relative min-h-screen">
+    <main class="mx-auto px-4 py-2 sm:py-6 relative z-10">
+      {{ content }}
+    </main>
+  </div>
 
   <footer class="text-center text-xs text-zinc-700 py-6">
     Paul Martinez &copy; {{ site.time | date: "%Y" }}
   </footer>
 
   <script>
-    document.addEventListener('click', function(e) {
+    document.addEventListener('click', function (e) {
       var m = document.getElementById('mobile-menu');
       var b = document.getElementById('hamburger-btn');
       if (m && !m.classList.contains('hidden') && b && !m.contains(e.target) && !b.contains(e.target)) {
