@@ -5,6 +5,10 @@ baseurl: ""
 lang: fr
 timezone: Europe/Paris
 author: Paul Martinez
+# REQUIRED avant d'ajouter de vraies entrées dans _data/photos.yml : ton cloud
+# name Cloudinary (public — visible dans chaque URL de livraison, pas un secret).
+# Le trouver sur le dashboard Cloudinary, section "Product Environment Settings".
+cloudinary_cloud_name: "your-cloud-name"
 markdown: kramdown
 theme: null
 plugins:

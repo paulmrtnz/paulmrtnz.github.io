@@ -1,8 +1,10 @@
 {% if site.data.photos and site.data.photos.size > 0 %}
   <div class="photo-grid">
+    {% assign cloudinary_base = "https://res.cloudinary.com/" | append: site.cloudinary_cloud_name | append: "/image/upload/" %}
+    {% assign cloudinary_transform = "f_auto,q_auto,w_1200,c_limit/" %}
     {% for photo in site.data.photos %}
       <div class="photo-item">
-        <img src="{{ photo.src | relative_url }}"
+        <img src="{{ cloudinary_base }}{{ cloudinary_transform }}{{ photo.id }}"
              alt="{{ photo.alt | default: '' }}"
              loading="lazy" />
       </div>

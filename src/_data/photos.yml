@@ -1,3 +1,7 @@
-# Ajouter chaque photo ici — src relatif à la racine du site
-# - src: /assets/imgs/photos/nom-du-fichier.jpg
-#   alt: "Description courte"
+# Ajouter chaque photo ici — id = Public ID Cloudinary (dossier/nom-du-fichier, sans extension)
+# alt = texte alternatif (accessibilité, court)
+# Exemple :
+# - id: "portfolio/coucher-de-soleil-lac"
+#   alt: "Coucher de soleil sur le lac"
+- id: "portfolio/paul-martinez-myvN-LbiCyg-unsplash_whbruv"
+  alt: "Photo de test"
